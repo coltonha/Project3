@@ -1,7 +1,5 @@
 package phase1;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
-
 public class StackArrayBased implements StackInterface {
     int MAX_STACK = 50; // maximum size of stack
     private Object items[];
@@ -40,7 +38,7 @@ public class StackArrayBased implements StackInterface {
             return items[top--];
         }
         else {
-            throw new StackException("StackException on pop: stack empty");
+            throw new StackException("StackException on "+"pop: stack empty");
         } // end if
     } // end pop
     
@@ -49,7 +47,7 @@ public class StackArrayBased implements StackInterface {
             return items[top];
     }
         else {
-            throw new StackException("Stack exception on peek - stack empty");
+            throw new StackException("Stack exception on "+"peek - stack empty");
         } // end if
     } // end peek
 
