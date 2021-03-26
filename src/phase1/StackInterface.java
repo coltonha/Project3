@@ -9,7 +9,7 @@ public interface StackInterface {
     public void popAll();
     // Removes all the items from the stack.
     // Precondition: None.
-    // Postcondition: Stack is empty.
+    // Postcondition: Stack is empty. 
     public void push(Object newItem) throws StackException;
     // Adds an item to the top of a stack.
     // Precondition: newItem is the item to be added.

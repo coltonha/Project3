@@ -1,8 +1,11 @@
 package phase1;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
 public class StackArrayBased implements StackInterface {
-    final int MAX_STACK = 50; // maximum size of stack
+    int MAX_STACK = 50; // maximum size of stack
     private Object items[];
-    private int top;
+    private int top;  //index top
     
     public StackArrayBased() {
         items= new Object[MAX_STACK];
@@ -22,7 +25,8 @@ public class StackArrayBased implements StackInterface {
             items[++top] = newItem;
         }     
         else {
-            throw new StackException("StackException on "+"push: stack full");
+            items=resize(items);
+            items[++top]= newItem;
         } // end if
     } // end push
     
@@ -36,15 +40,30 @@ public class StackArrayBased implements StackInterface {
             return items[top--];
         }
         else {
-            throw new StackException("StackException on " + "pop: stack empty");
+            throw new StackException("StackException on pop: stack empty");
         } // end if
     } // end pop
+    
     public Object peek() throws StackException {
         if (!isEmpty()) {
             return items[top];
     }
         else {
-            throw new StackException("Stack exception on "+"peek - stack empty");
+            throw new StackException("Stack exception on peek - stack empty");
         } // end if
     } // end peek
+
+    public Object[] resize(Object[] items)
+    {
+        // allocate memory for new stack
+        Object[] new_a = new Object[MAX_STACK*2];
+    
+        // copying the content of old stack
+        for (int i = 0; i < MAX_STACK; i++)
+            new_a[i] = items[i];
+    
+        // re-sizing the length
+        MAX_STACK=MAX_STACK*2;
+        return new_a;
+    }
 } // end StackArrayBased
