@@ -1,14 +1,31 @@
 package phase2;
 
-class Node {
-    Object item;
-    Node next;
-    Node(Object newItem) {
-    item = newItem;
-    next = null;
-    } // end constructor
-    Node(Object newItem, Node nextNode) {
-    item = newItem;
-    next = nextNode;
-    } // end constructor
-    } // end class Node
+public class Node {
+    public char item;
+    public Node next;
+    public Node(){
+        item='\0';
+        next=null;
+    }
+    public Node(char newItem){
+        setItem(newItem);
+    }
+    public Node (char newItem, Node newNext){
+        setItem(newItem);
+        setNext(newNext);
+    }
+
+    public int getItem() {
+        return item;
+    }
+    public Node getNext() {
+        return next;
+    }
+    public void setItem(char newItem){
+        item=newItem;
+    }
+    public void setNext(Node newNext) {
+        next=newNext;
+    }
+    
+}

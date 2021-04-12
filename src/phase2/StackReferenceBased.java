@@ -10,11 +10,11 @@ public class StackReferenceBased implements StackInterface {
         return top == null;
     } // end isEmpty
     
-    public void push(Object newItem) {
+    public void push(char newItem) {
         top = new Node(newItem, top);
     } // end push
     
-    public Object pop() throws StackException {
+    public char pop() throws StackException {
         if (!isEmpty()) {
             Node temp = top;
             top = top.next;
@@ -29,7 +29,7 @@ public class StackReferenceBased implements StackInterface {
         top = null;
     } // end popAll
     
-    public Object peek() throws StackException {
+    public char peek() throws StackException {
         if (!isEmpty()) {
             return top.item;
         }
