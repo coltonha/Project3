@@ -1,9 +1,15 @@
 package phase2;
 
+import java.util.Scanner;
+
 public class StringRecognizer {
     public static void main(String[] args) {
         StackReferenceBased aStack = new StackReferenceBased();
-        String testString ="abcd$dcba";
+        System.out.println("Enter the string you want to test: ");
+        String testString;
+        Scanner scn= new Scanner(System.in);
+        testString=scn.nextLine();
+        scn.close();
         int i=0;
         char ch=testString.charAt(i);
         //push till $
