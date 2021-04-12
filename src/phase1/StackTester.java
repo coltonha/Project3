@@ -1,3 +1,11 @@
+ /*
+ * Project #3
+ * Source Code File: StackTester.java
+ * Programmer: Sungwoong Ha
+ * Due: 4/13/21
+ * Description: This is a Java implementation of a stacktester
+ * 
+ */
 package phase1;
 
 public class StackTester {

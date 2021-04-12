@@ -1,3 +1,11 @@
+ /*
+ * Project #3
+ * Source Code File: StackArrayBased.java
+ * Programmer: Sungwoong Ha
+ * Due: 4/13/21
+ * Description: This is a Java implementation of a stackarray
+ * 
+ */
 package phase1;
 
 public class StackArrayBased implements StackInterface {

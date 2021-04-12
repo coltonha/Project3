@@ -1,3 +1,11 @@
+ /*
+ * Project #3
+ * Source Code File: Node.java
+ * Programmer: Sungwoong Ha
+ * Due: 4/13/21
+ * Description: This is a Java implementation of a node
+ * 
+ */
 package phase2;
 
 public class Node {

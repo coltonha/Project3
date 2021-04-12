@@ -1,3 +1,11 @@
+ /*
+ * Project #3
+ * Source Code File: StringRecognizer.java
+ * Programmer: Sungwoong Ha
+ * Due: 4/13/21
+ * Description: This is a Java implementation of a StringRecognizer
+ * 
+ */
 package phase2;
 
 import java.util.Scanner;

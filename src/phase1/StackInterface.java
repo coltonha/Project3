@@ -1,3 +1,11 @@
+ /*
+ * Project #3
+ * Source Code File: StackInterface.java
+ * Programmer: Sungwoong Ha
+ * Due: 4/13/21
+ * Description: This is a Java implementation of a stackinterface
+ * 
+ */
 package phase1;
 
 public interface StackInterface {
